@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/custom_header_bar" />
+
+    <LinearLayout
+        android:layout_width="373dp"
+        android:layout_height="425dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235">
+
+        <Button
+            android:id="@+id/abrirOutraTelaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir outra tela"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/alterarTextoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alterar texto abaixo conforme o conteúdo do input" />
+
+        <EditText
+            android:id="@+id/recebeTextoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="INSIRA UM TEXTO AQUI"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O texto deve ficar aqui." />
+
+        <Button
+            android:id="@+id/invocarToastButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invocar toast com mensagem conforme o conteúdo acima" />
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Opção 1" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opção 2" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opção 3" />
+
+            <Button
+                android:id="@+id/checarOpcaoSelecionadaButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verificar a Opção checada" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
